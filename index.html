@@ -4,399 +4,362 @@
   <meta charset="UTF-8" />
   <title>Hai Hoang – R&amp;D Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Online CV and portfolio of Hai Hoang." />
+  <meta name="description" content="Online CV of Hai Hoang – R&amp;D Engineer." />
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --text-main: #e5e7eb;
-      --text-soft: #9ca3af;
-      --accent: #38bdf8;
-      --border: #1f2937;
+      --bg: #fbf6ec;
+      --text-main: #222222;
+      --text-soft: #4b5563;
+      --accent: #2169a8;
+      --accent-soft: #e1eef9;
+      --border: #e5e7eb;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1e293b, #020617 55%, #000 100%);
+      font-family: var(--font);
+      background: var(--bg);
       color: var(--text-main);
-      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
     .page {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 32px 16px 48px;
+      padding: 24px 16px 48px;
     }
 
-    /* TOP BAR WITH 4 BUTTONS */
+    /* TOP NAV */
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.96),
-        rgba(15, 23, 42, 0.85),
-        transparent
-      );
-      border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+      background: rgba(251, 246, 236, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #efe3d4;
     }
 
     .nav-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 10px 16px;
+      padding: 14px 16px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .nav-left {
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    nav {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      justify-content: center;
+      gap: 32px;
     }
 
     nav a {
       text-decoration: none;
-      font-size: 0.85rem;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
-      transition: all 0.15s ease-out;
+      font-size: 0.95rem;
+      color: #444;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease-out, border-color 0.15s ease-out;
     }
 
     nav a:hover {
-      color: #e5e7eb;
-      border-color: rgba(56, 189, 248, 0.9);
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9),
-        0 8px 20px rgba(15, 23, 42, 0.9);
-      background: radial-gradient(
-        circle at top left,
-        rgba(56, 189, 248, 0.25),
-        rgba(15, 23, 42, 1)
-      );
+      color: var(--accent);
+      border-color: var(--accent);
     }
 
+    /* HERO */
     .hero {
-      margin-top: 32px;
-      margin-bottom: 32px;
-      border-radius: 18px;
-      padding: 20px 18px 24px;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      background: radial-gradient(
-          circle at top left,
-          rgba(56, 189, 248, 0.16),
-          transparent 55%
-        ),
-        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.2), #020617);
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.95);
+      text-align: center;
+      padding: 80px 12px 70px;
     }
 
     .hero-name {
-      font-size: clamp(2.1rem, 2.5vw + 1.4rem, 2.6rem);
-      font-weight: 650;
-      letter-spacing: 0.04em;
-      margin: 0 0 4px;
+      font-size: clamp(2.8rem, 4vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin: 0 0 10px;
+      color: #222;
     }
 
     .hero-role {
-      font-size: 1.05rem;
-      color: #a5b4fc;
-      margin-bottom: 12px;
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin: 0;
     }
 
-    .hero-text {
-      max-width: 40rem;
+    /* SECTION LAYOUT */
+    section {
+      margin-bottom: 56px;
+    }
+
+    .section-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    h2.section-title {
+      font-size: 1.4rem;
+      margin: 0 0 4px;
+      color: var(--accent);
+    }
+
+    .section-underline {
+      width: 70px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .section-text {
       font-size: 0.98rem;
       color: var(--text-soft);
     }
 
-    .hero-tags {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    /* EXPERIENCE */
+    .exp-item {
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .tag {
-      font-size: 0.78rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .tag.accent {
-      border-color: rgba(56, 189, 248, 0.95);
-      color: #e0f2fe;
-      background: rgba(8, 47, 73, 0.95);
-    }
-
-    section {
-      margin-bottom: 28px;
-      border-radius: 18px;
-      padding: 18px 18px 20px;
-      border: 1px solid var(--border);
-      background: radial-gradient(circle at top, #0b1120, #020617);
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.85);
-    }
-
-    section h2 {
-      margin: 0 0 6px;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #9ca3af;
-    }
-
-    .section-sub {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .item {
-      margin-bottom: 10px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed rgba(55, 65, 81, 0.7);
-    }
-
-    .item:last-child {
+    .exp-item:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
 
-    .item-title {
+    .exp-role {
       font-weight: 600;
-      color: var(--text-main);
+      margin-bottom: 4px;
     }
 
-    .item-meta {
-      font-size: 0.86rem;
-      color: var(--text-soft);
-    }
-
-    .item ul {
-      margin: 6px 0 0 20px;
-      padding: 0;
+    .exp-meta {
       font-size: 0.9rem;
       color: var(--text-soft);
+      margin-bottom: 6px;
     }
 
-    .item li { margin-bottom: 3px; }
+    .exp-item ul {
+      margin: 0 0 0 18px;
+      padding: 0;
+      color: var(--text-soft);
+      font-size: 0.96rem;
+    }
 
-    .grid {
+    .exp-item li {
+      margin-bottom: 3px;
+    }
+
+    /* SKILLS */
+    .skills-groups {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px 18px;
+      gap: 18px;
+      margin-top: 10px;
     }
 
-    .pill-list {
+    .skills-group-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .chip-list {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
     }
 
-    .pill {
-      font-size: 0.8rem;
-      padding: 3px 9px;
+    .chip {
+      font-size: 0.85rem;
+      padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
+      background: var(--accent-soft);
+      color: #1f2933;
     }
 
+    /* CONTACT */
     .contact-row {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 110px 1fr;
       gap: 8px;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
+      margin-bottom: 8px;
+      font-size: 0.97rem;
     }
 
     .contact-label {
-      color: var(--text-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.76rem;
+      font-weight: 600;
+      color: #374151;
     }
 
     .contact-value a {
-      color: #60a5fa;
+      color: var(--accent);
       text-decoration: none;
     }
 
-    .contact-value a:hover { text-decoration: underline; }
+    .contact-value a:hover {
+      text-decoration: underline;
+    }
 
     footer {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 4px 16px 22px;
+      padding: 8px 16px 24px;
       font-size: 0.8rem;
-      color: var(--text-soft);
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
+      color: #6b7280;
+      border-top: 1px solid #efe3d4;
+      text-align: center;
     }
 
     @media (max-width: 640px) {
-      .hero { padding: 16px 14px 20px; }
-      .contact-row { grid-template-columns: 1fr; }
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero {
+        padding-top: 60px;
       }
-      nav { justify-content: flex-start; }
+      .contact-row {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- TOP NAV -->
   <header>
     <div class="nav-inner">
-      <div class="nav-left">Hai Hoang</div>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <div class="page">
+    <!-- HERO -->
     <section class="hero" id="about">
       <h1 class="hero-name">Hai Hoang</h1>
-      <div class="hero-role">Project Coordinator · Germany–Vietnam Liaison</div>
-      <p class="hero-text">
-        I work at the intersection of technology, operations and cross-cultural
-        communication. I help teams structure processes, coordinate projects
-        and bridge German–Vietnamese contexts in both technical and business
-        environments.
-      </p>
-      <div class="hero-tags">
-        <span class="tag accent">Open to new opportunities</span>
-        <span class="tag">Project Coordination</span>
-        <span class="tag">Tech & Operations</span>
-        <span class="tag">Germany ↔ Vietnam</span>
+      <p class="hero-role">R&amp;D Engineer</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section>
+      <div class="section-inner">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-underline"></div>
+        <p class="section-text">
+          I am an R&amp;D Engineer with experience in developing and testing
+          technical solutions from concept to implementation. I enjoy working
+          at the intersection of engineering, documentation and process
+          improvement, and I am comfortable collaborating in international
+          teams in both German and English.
+        </p>
+        <p class="section-text">
+          My background includes hands-on work with hardware and software,
+          building prototypes, analysing test data and communicating results
+          clearly to stakeholders. I like bringing structure into complex
+          topics and turning ideas into something tangible and understandable.
+        </p>
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Experience</h2>
-      <p class="section-sub">
-        Recent roles and responsibilities. Adjust these entries to match your CV.
-      </p>
+      <div class="section-inner">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-underline"></div>
 
-      <div class="item">
-        <div class="item-title">Project Coordinator – Company Name</div>
-        <div class="item-meta">City, Country · 2022 – 2025</div>
-        <ul>
-          <li>Coordinate cross-functional teams between Germany and Vietnam.</li>
-          <li>Set up and improve processes for operations and documentation.</li>
-          <li>Communicate with stakeholders in Vietnamese, German and English.</li>
-        </ul>
-      </div>
+        <div class="exp-item">
+          <div class="exp-role">R&amp;D Engineer – Company Name</div>
+          <div class="exp-meta">City, Country · 2022 – Present</div>
+          <ul>
+            <li>Develop and test new product concepts in collaboration with cross-functional teams.</li>
+            <li>Create documentation, test plans and reports for internal and external stakeholders.</li>
+            <li>Analyse measurement data and propose improvements to performance and reliability.</li>
+          </ul>
+        </div>
 
-      <div class="item">
-        <div class="item-title">Previous Role – Company Name</div>
-        <div class="item-meta">City, Country · 2019 – 2022</div>
-        <ul>
-          <li>Short bullet about what you did / achieved.</li>
-          <li>Short bullet about tools or responsibilities.</li>
-        </ul>
+        <div class="exp-item">
+          <div class="exp-role">Previous Position – Company Name</div>
+          <div class="exp-meta">City, Country · 2019 – 2022</div>
+          <ul>
+            <li>Short bullet point about your main responsibility or achievement.</li>
+            <li>Short bullet point about tools, technologies or processes you used.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects & Highlights</h2>
-      <p class="section-sub">
-        A few selected projects and areas of work you want to highlight.
-      </p>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-inner">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-underline"></div>
 
-      <div class="grid">
-        <div>
-          <div class="item-title">Process & Documentation</div>
-          <p class="section-sub">
-            Examples: creating templates, improving workflows, building clear
-            documentation for teams or tax/finance processes.
-          </p>
+        <div class="skills-groups">
+          <div>
+            <div class="skills-group-title">Technical</div>
+            <div class="chip-list">
+              <span class="chip">R&amp;D Engineering</span>
+              <span class="chip">Testing &amp; validation</span>
+              <span class="chip">Data analysis</span>
+              <span class="chip">Documentation</span>
+            </div>
+          </div>
+          <div>
+            <div class="skills-group-title">Tools</div>
+            <div class="chip-list">
+              <span class="chip">Excel / Google Sheets</span>
+              <span class="chip">Python / MATLAB (if relevant)</span>
+              <span class="chip">Lab instruments</span>
+            </div>
+          </div>
+          <div>
+            <div class="skills-group-title">Languages</div>
+            <div class="chip-list">
+              <span class="chip">Vietnamese (native)</span>
+              <span class="chip">German</span>
+              <span class="chip">English</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="item-title">Germany–Vietnam Bridge</div>
-          <p class="section-sub">
-            Supporting cooperation between German companies and Vietnamese
-            partners, interpreting requirements and cultural expectations.
-          </p>
-        </div>
-      </div>
-
-      <h3 style="margin-top:16px; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.14em; color:#9ca3af;">
-        Skills & Tools
-      </h3>
-      <div class="pill-list">
-        <span class="pill">Project coordination</span>
-        <span class="pill">Process design</span>
-        <span class="pill">Documentation</span>
-        <span class="pill">Excel / Google Sheets</span>
-        <span class="pill">German · English · Vietnamese</span>
-        <span class="pill">Cross-cultural communication</span>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p class="section-sub">
-        Feel free to reach out for roles, collaborations or questions.
-      </p>
+      <div class="section-inner">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-underline"></div>
 
-      <div class="contact-row">
-        <div class="contact-label">Email</div>
-        <div class="contact-value">
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <div class="contact-row">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+          </div>
         </div>
-      </div>
 
-      <div class="contact-row">
-        <div class="contact-label">Location</div>
-        <div class="contact-value">City, Country</div>
-      </div>
+        <div class="contact-row">
+          <div class="contact-label">Location</div>
+          <div class="contact-value">City, Country</div>
+        </div>
 
-      <div class="contact-row">
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value">
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
-            linkedin.com/in/your-profile
-          </a>
+        <div class="contact-row">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+              linkedin.com/in/your-profile
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </div>
 
   <footer>
-    <span>© <span id="year"></span> Hai Hoang</span>
-    <span>Built with HTML · Hosted on GitHub Pages</span>
+    © <span id="year"></span> Hai Hoang
   </footer>
 
   <script>
