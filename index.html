@@ -15,18 +15,12 @@
       --border: #1f2937;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #1e293b, #020617 55%, #000 100%);
       color: var(--text-main);
       line-height: 1.6;
@@ -102,7 +96,6 @@
       );
     }
 
-    /* HERO / INTRO */
     .hero {
       margin-top: 32px;
       margin-bottom: 32px;
@@ -159,7 +152,6 @@
       background: rgba(8, 47, 73, 0.95);
     }
 
-    /* SECTIONS */
     section {
       margin-bottom: 28px;
       border-radius: 18px;
@@ -184,7 +176,6 @@
       margin-bottom: 10px;
     }
 
-    /* EXPERIENCE LIST */
     .item {
       margin-bottom: 10px;
       padding-bottom: 8px;
@@ -201,4 +192,215 @@
       color: var(--text-main);
     }
 
-    .item-me
+    .item-meta {
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .item ul {
+      margin: 6px 0 0 20px;
+      padding: 0;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .item li { margin-bottom: 3px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px 18px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .contact-label {
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.76rem;
+    }
+
+    .contact-value a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .contact-value a:hover { text-decoration: underline; }
+
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4px 16px 22px;
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 16px 14px 20px; }
+      .contact-row { grid-template-columns: 1fr; }
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="nav-left">Hai Hoang</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <section class="hero" id="about">
+      <h1 class="hero-name">Hai Hoang</h1>
+      <div class="hero-role">Project Coordinator · Germany–Vietnam Liaison</div>
+      <p class="hero-text">
+        I work at the intersection of technology, operations and cross-cultural
+        communication. I help teams structure processes, coordinate projects
+        and bridge German–Vietnamese contexts in both technical and business
+        environments.
+      </p>
+      <div class="hero-tags">
+        <span class="tag accent">Open to new opportunities</span>
+        <span class="tag">Project Coordination</span>
+        <span class="tag">Tech & Operations</span>
+        <span class="tag">Germany ↔ Vietnam</span>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <p class="section-sub">
+        Recent roles and responsibilities. Adjust these entries to match your CV.
+      </p>
+
+      <div class="item">
+        <div class="item-title">Project Coordinator – Company Name</div>
+        <div class="item-meta">City, Country · 2022 – 2025</div>
+        <ul>
+          <li>Coordinate cross-functional teams between Germany and Vietnam.</li>
+          <li>Set up and improve processes for operations and documentation.</li>
+          <li>Communicate with stakeholders in Vietnamese, German and English.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Previous Role – Company Name</div>
+        <div class="item-meta">City, Country · 2019 – 2022</div>
+        <ul>
+          <li>Short bullet about what you did / achieved.</li>
+          <li>Short bullet about tools or responsibilities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects & Highlights</h2>
+      <p class="section-sub">
+        A few selected projects and areas of work you want to highlight.
+      </p>
+
+      <div class="grid">
+        <div>
+          <div class="item-title">Process & Documentation</div>
+          <p class="section-sub">
+            Examples: creating templates, improving workflows, building clear
+            documentation for teams or tax/finance processes.
+          </p>
+        </div>
+        <div>
+          <div class="item-title">Germany–Vietnam Bridge</div>
+          <p class="section-sub">
+            Supporting cooperation between German companies and Vietnamese
+            partners, interpreting requirements and cultural expectations.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:16px; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.14em; color:#9ca3af;">
+        Skills & Tools
+      </h3>
+      <div class="pill-list">
+        <span class="pill">Project coordination</span>
+        <span class="pill">Process design</span>
+        <span class="pill">Documentation</span>
+        <span class="pill">Excel / Google Sheets</span>
+        <span class="pill">German · English · Vietnamese</span>
+        <span class="pill">Cross-cultural communication</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-sub">
+        Feel free to reach out for roles, collaborations or questions.
+      </p>
+
+      <div class="contact-row">
+        <div class="contact-label">Email</div>
+        <div class="contact-value">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">City, Country</div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+            linkedin.com/in/your-profile
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span>© <span id="year"></span> Hai Hoang</span>
+    <span>Built with HTML · Hosted on GitHub Pages</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
