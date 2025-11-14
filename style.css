@@ -236,8 +236,8 @@ section {
 
 /* Wrapper for QR code block under the contact cards */
 .qr-wrapper {
-  margin-top: 80px;      /* move QR further down */
-  margin-bottom: 8px;    /* small gap before footer */
+  margin-top: 80px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
 }
@@ -246,6 +246,7 @@ section {
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-soft);
+  display: inline-block;        /* (optional) keep card itself tight */
 }
 
 .qr-card img {
@@ -253,6 +254,7 @@ section {
   height: 140px;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 6px;           /* 🔹 center the image under the card */
 }
 
 .contact-item {
