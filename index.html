@@ -15,7 +15,8 @@
 </head>
 <body>
   <!-- =========================================================
-       TOP NAVIGATION: update link labels if you rename sections
+       TOP NAVIGATION
+       - If you rename a section (id="..."), update the link here
        ========================================================= -->
   <header>
     <div class="nav-inner">
@@ -31,24 +32,28 @@
   <!-- Main page content wrapper -->
   <div class="page">
 
-    <!-- =========================
+    <!-- ======================================================
          HERO (NAME + JOB TITLE)
-         Change the text below.
-         ========================= -->
+         - Change your name and role here
+         ====================================================== -->
     <section class="hero" id="about">
+      <!-- HERO NAME -->
       <h1 class="hero-name">Hai Hoang</h1>
+
+      <!-- HERO ROLE / TITLE -->
       <p class="hero-role">R&amp;D Engineer</p>
     </section>
 
-    <!-- ==================
+    <!-- ======================================================
          ABOUT ME SECTION
-         Edit the paragraphs.
-         ================== -->
+         - Edit / add paragraphs in the ABOUT TEXT BLOCKS
+         ====================================================== -->
     <section>
       <div class="section-inner">
         <h2 class="section-title">About Me</h2>
         <div class="section-underline"></div>
 
+        <!-- ABOUT TEXT BLOCK 1 -->
         <p class="section-text">
           I am an R&amp;D Engineer with experience in developing and testing
           technical solutions from concept to implementation. I enjoy working
@@ -56,31 +61,54 @@
           improvement, and I am comfortable collaborating in international
           teams in both German and English.
         </p>
+
+        <!-- ABOUT TEXT BLOCK 2 -->
         <p class="section-text">
           My background includes hands-on work with hardware and software,
           building prototypes, analysing test data and communicating results
           clearly to stakeholders. I like bringing structure into complex
           topics and turning ideas into something tangible and understandable.
         </p>
+
+        <!--
+          To add more ABOUT paragraphs, copy one of the blocks above:
+
+          <p class="section-text">
+            Your new paragraph here.
+          </p>
+        -->
       </div>
     </section>
 
-    <!-- ==========================
+    <!-- ======================================================
          WORK EXPERIENCE SECTION
-         Duplicate .exp-card blocks
-         to add more jobs.
-         ========================== -->
+         - Each ".exp-card" is ONE JOB
+         - Copy an entire EXP-CARD BLOCK to add new jobs
+         ====================================================== -->
     <section id="experience">
       <div class="section-inner">
         <h2 class="section-title">Work Experience</h2>
         <div class="section-underline"></div>
 
         <div class="exp-list">
-          <!-- JOB 1: edit to your real job -->
+
+          <!-- ==========================
+               EXP-CARD BLOCK: JOB 1
+               - CURRENT OR MOST RECENT JOB
+               ========================== -->
           <div class="exp-card">
+            <!-- JOB TITLE + ROLE -->
             <div class="exp-role">R&amp;D Engineer – Company Name</div>
+
+            <!-- JOB DATES -->
             <div class="exp-dates">January 2023 – Present</div>
-            <div class="exp-company">Company Name GmbH – <span>City, Country</span></div>
+
+            <!-- COMPANY NAME + LOCATION -->
+            <div class="exp-company">
+              Company Name GmbH – <span>City, Country</span>
+            </div>
+
+            <!-- JOB BULLETS (MAIN RESPONSIBILITIES / ACHIEVEMENTS) -->
             <ul>
               <li>Develop and test new product concepts from early prototypes to stable solutions.</li>
               <li>Design test setups, analyse measurement data and document results for stakeholders.</li>
@@ -88,31 +116,60 @@
             </ul>
           </div>
 
-          <!-- JOB 2: example previous role -->
+          <!-- ==========================
+               EXP-CARD BLOCK: JOB 2
+               - PREVIOUS JOB EXAMPLE
+               ========================== -->
           <div class="exp-card">
+            <!-- JOB TITLE + ROLE -->
             <div class="exp-role">Previous Position – Company Name</div>
+
+            <!-- JOB DATES -->
             <div class="exp-dates">October 2020 – December 2022</div>
-            <div class="exp-company">Freelancing – <span>City, Country</span></div>
+
+            <!-- COMPANY NAME + LOCATION -->
+            <div class="exp-company">
+              Freelancing – <span>City, Country</span>
+            </div>
+
+            <!-- JOB BULLETS -->
             <ul>
               <li>Short bullet about your main responsibility or achievement.</li>
               <li>Short bullet about tools, technologies or processes you used.</li>
             </ul>
           </div>
+
+          <!--
+            TEMPLATE: COPY THIS BLOCK TO ADD A NEW JOB
+
+            <div class="exp-card">
+              <div class="exp-role">Job Title – Company Name</div>
+              <div class="exp-dates">Month YYYY – Month YYYY</div>
+              <div class="exp-company">Company Name – <span>City, Country</span></div>
+              <ul>
+                <li>First bullet about what you did / achieved.</li>
+                <li>Second bullet (tools, technologies, processes).</li>
+                <li>Optional: third bullet.</li>
+              </ul>
+            </div>
+          -->
         </div>
       </div>
     </section>
 
-    <!-- ==================
+    <!-- ======================================================
          SKILLS SECTION
-         Edit texts inside each
-         .skill-card block.
-         ================== -->
+         - Each ".skill-card" is ONE CATEGORY (e.g. Languages, Tools)
+         - Copy a SKILL-CARD BLOCK to add more categories
+         ====================================================== -->
     <section id="skills">
       <div class="section-inner">
         <h2 class="section-title">Skills</h2>
         <div class="section-underline"></div>
 
         <div class="skills-grid">
+
+          <!-- SKILL-CARD BLOCK: PROGRAMMING LANGUAGES -->
           <div class="skill-card">
             <div class="skill-title">Programming Languages</div>
             <div class="skill-text">
@@ -120,6 +177,7 @@
             </div>
           </div>
 
+          <!-- SKILL-CARD BLOCK: TECHNOLOGIES & TOOLS -->
           <div class="skill-card">
             <div class="skill-title">Technologies &amp; Tools</div>
             <div class="skill-text">
@@ -127,6 +185,7 @@
             </div>
           </div>
 
+          <!-- SKILL-CARD BLOCK: OPERATING SYSTEMS -->
           <div class="skill-card">
             <div class="skill-title">Operating Systems</div>
             <div class="skill-text">
@@ -134,29 +193,39 @@
             </div>
           </div>
 
+          <!-- SKILL-CARD BLOCK: SPOKEN LANGUAGES -->
           <div class="skill-card">
             <div class="skill-title">Languages</div>
             <div class="skill-text">
               Vietnamese (native) · German · English · Chinese
             </div>
           </div>
+
+          <!--
+            TEMPLATE: COPY THIS BLOCK TO ADD A SKILL CATEGORY
+
+            <div class="skill-card">
+              <div class="skill-title">Category Name</div>
+              <div class="skill-text">
+                Item 1 · Item 2 · Item 3
+              </div>
+            </div>
+          -->
         </div>
       </div>
     </section>
 
-    <!-- ==================
+    <!-- ======================================================
          CONTACT SECTION
-         Change phone, location,
-         LinkedIn, email and QR
-         link here.
-         ================== -->
+         - Update your phone, location, LinkedIn, email & QR URL here
+         ====================================================== -->
     <section id="contact">
       <div class="section-inner">
         <h2 class="section-title">Contact</h2>
         <div class="section-underline"></div>
 
         <div class="contact-grid">
-          <!-- PHONE -->
+          <!-- CONTACT BLOCK: PHONE -->
           <div class="contact-item">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24">
@@ -171,7 +240,7 @@
             </div>
           </div>
 
-          <!-- LOCATION -->
+          <!-- CONTACT BLOCK: LOCATION -->
           <div class="contact-item">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24">
@@ -187,7 +256,7 @@
             </div>
           </div>
 
-          <!-- LINKEDIN -->
+          <!-- CONTACT BLOCK: LINKEDIN -->
           <div class="contact-item">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24">
@@ -199,7 +268,7 @@
             <div>
               <div class="contact-title">LinkedIn</div>
               <div class="contact-value">
-                <!-- TEXT CAN BE SHORTER THAN URL -->
+                <!-- Visible text can be short, link is full URL -->
                 <a href="https://www.linkedin.com/in/hai-h/" target="_blank" rel="noreferrer">
                   linkedin.com/in/hai-h
                 </a>
@@ -207,7 +276,7 @@
             </div>
           </div>
 
-          <!-- EMAIL -->
+          <!-- CONTACT BLOCK: EMAIL -->
           <div class="contact-item">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24">
@@ -218,6 +287,7 @@
             <div>
               <div class="contact-title">Email</div>
               <div class="contact-value">
+                <!-- white-space: nowrap keeps the email on one line -->
                 <a href="mailto:thanh-hai.hoang@outlook.de" style="white-space: nowrap;">
                   thanh-hai.hoang@outlook.de
                 </a>
@@ -226,9 +296,10 @@
           </div>
         </div>
 
-        <!-- QR CODE
-             To link to another page (e.g. LinkedIn),
-             change the URL in data= below. -->
+        <!-- ==================================================
+             QR CODE BLOCK
+             - To point elsewhere, change the URL in data= below
+             ================================================== -->
         <div class="qr-wrapper">
           <div class="qr-card">
             <img
@@ -242,7 +313,10 @@
     </section>
   </div>
 
-  <!-- FOOTER: year is inserted by JavaScript below -->
+  <!-- ======================================================
+       FOOTER
+       - Year is filled automatically by the script below
+       ====================================================== -->
   <footer>
     © <span id="year"></span> Hai Hoang. All rights reserved.
   </footer>
