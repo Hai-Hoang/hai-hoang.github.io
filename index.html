@@ -8,6 +8,7 @@
   <style>
     :root {
       --bg: #fbf6ec;
+      --card-bg: #f6eee2;
       --text-main: #222222;
       --text-soft: #4b5563;
       --accent: #2169a8;
@@ -18,9 +19,7 @@
 
     * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -108,7 +107,7 @@
     }
 
     .section-underline {
-      width: 70px;
+      width: 90px;
       height: 3px;
       background: var(--accent);
       border-radius: 999px;
@@ -120,38 +119,54 @@
       color: var(--text-soft);
     }
 
-    /* EXPERIENCE */
-    .exp-item {
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
+    /* WORK EXPERIENCE CARDS */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-top: 10px;
     }
 
-    .exp-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
+    .exp-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 18px 22px 20px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
     }
 
     .exp-role {
       font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent);
       margin-bottom: 4px;
     }
 
-    .exp-meta {
+    .exp-dates {
       font-size: 0.9rem;
       color: var(--text-soft);
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
-    .exp-item ul {
+    .exp-company {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .exp-company span {
+      font-weight: 400;
+      color: var(--text-soft);
+    }
+
+    .exp-card ul {
       margin: 0 0 0 18px;
       padding: 0;
       color: var(--text-soft);
       font-size: 0.96rem;
     }
 
-    .exp-item li {
-      margin-bottom: 3px;
+    .exp-card li {
+      margin-bottom: 4px;
     }
 
     /* SKILLS */
@@ -221,6 +236,9 @@
       .contact-row {
         grid-template-columns: 1fr;
       }
+      .exp-card {
+        padding: 16px 16px 18px;
+      }
     }
   </style>
 </head>
@@ -230,7 +248,7 @@
     <div class="nav-inner">
       <nav>
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Work Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -265,29 +283,35 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- WORK EXPERIENCE -->
     <section id="experience">
       <div class="section-inner">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">Work Experience</h2>
         <div class="section-underline"></div>
 
-        <div class="exp-item">
-          <div class="exp-role">R&amp;D Engineer – Company Name</div>
-          <div class="exp-meta">City, Country · 2022 – Present</div>
-          <ul>
-            <li>Develop and test new product concepts in collaboration with cross-functional teams.</li>
-            <li>Create documentation, test plans and reports for internal and external stakeholders.</li>
-            <li>Analyse measurement data and propose improvements to performance and reliability.</li>
-          </ul>
-        </div>
+        <div class="exp-list">
+          <!-- JOB 1 -->
+          <div class="exp-card">
+            <div class="exp-role">R&amp;D Engineer – Company Name</div>
+            <div class="exp-dates">January 2023 – Present</div>
+            <div class="exp-company">Company Name GmbH – <span>City, Country</span></div>
+            <ul>
+              <li>Develop and test new product concepts from early prototypes to stable solutions.</li>
+              <li>Design test setups, analyse measurement data and document results for stakeholders.</li>
+              <li>Work closely with cross-functional teams to improve performance and reliability.</li>
+            </ul>
+          </div>
 
-        <div class="exp-item">
-          <div class="exp-role">Previous Position – Company Name</div>
-          <div class="exp-meta">City, Country · 2019 – 2022</div>
-          <ul>
-            <li>Short bullet point about your main responsibility or achievement.</li>
-            <li>Short bullet point about tools, technologies or processes you used.</li>
-          </ul>
+          <!-- JOB 2 -->
+          <div class="exp-card">
+            <div class="exp-role">Previous Position – Company Name</div>
+            <div class="exp-dates">October 2020 – December 2022</div>
+            <div class="exp-company">Freelancing – <span>City, Country</span></div>
+            <ul>
+              <li>Short bullet about your main responsibility or achievement.</li>
+              <li>Short bullet about tools, technologies or processes you used.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
