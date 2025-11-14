@@ -3,303 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hai Hoang – R&amp;D Engineer</title>
+
+  <!-- Mobile-friendly viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Shown in Google search results etc. -->
   <meta name="description" content="Online CV of Hai Hoang – R&amp;D Engineer." />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --card-bg: #f7f5f5;
-      --text-main: #222222;
-      --text-soft: #4b5563;
-      --accent: #2169a8;
-      --accent-soft: #e1eef9;
-      --border: #e5e7eb;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
 
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: var(--font);
-      background: var(--bg);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
-    }
-
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 24px 16px 48px;
-    }
-
-    /* TOP NAV */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .nav-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 14px 16px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #444;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s ease-out, border-color 0.15s ease-out;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 80px 12px 70px;
-    }
-
-    .hero-name {
-      font-size: clamp(2.8rem, 4vw, 3.4rem);
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      margin: 0 0 10px;
-      color: #111827;
-    }
-
-    .hero-role {
-      font-size: 1.2rem;
-      color: var(--accent);
-      font-weight: 500;
-      margin: 0;
-    }
-
-    /* SECTION LAYOUT */
-    section {
-      margin-bottom: 56px;
-    }
-
-    .section-inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    h2.section-title {
-      font-size: 1.4rem;
-      margin: 0 0 4px;
-      color: var(--accent);
-    }
-
-    .section-underline {
-      width: 90px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-
-    .section-text {
-      font-size: 0.98rem;
-      color: var(--text-soft);
-    }
-
-    /* WORK EXPERIENCE CARDS */
-    .exp-list {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-      margin-top: 10px;
-    }
-
-    .exp-card {
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 18px 22px 20px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
-    }
-
-    .exp-role {
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .exp-dates {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      margin-bottom: 10px;
-    }
-
-    .exp-company {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .exp-company span {
-      font-weight: 400;
-      color: var(--text-soft);
-    }
-
-    .exp-card ul {
-      margin: 0 0 0 18px;
-      padding: 0;
-      color: var(--text-soft);
-      font-size: 0.96rem;
-    }
-
-    .exp-card li {
-      margin-bottom: 4px;
-    }
-
-    /* SKILLS – CARD GRID */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 10px;
-    }
-
-    .skill-card {
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 16px 18px 18px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
-    }
-
-    .skill-title {
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .skill-text {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      max-width: 760px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 18px;
-      margin-top: 16px;
-    }
-
-    .qr-wrapper {
-  margin-top: 80px;      /* move QR further down */
-  margin-bottom: 8px;    /* tiny space before footer */
-  display: flex;
-  justify-content: center;
-}
-
-
-    .qr-card {
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .qr-card img {
-      width: 140px;
-      height: 140px;
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .contact-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-icon svg {
-      width: 18px;
-      height: 18px;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 1.7;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .contact-title {
-      font-weight: 600;
-      margin-bottom: 2px;
-      font-size: 0.96rem;
-      color: #111827;
-    }
-
-    .contact-value {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-    }
-
-    .contact-value a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-value a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 8px 16px 24px;
-      font-size: 0.8rem;
-      color: #6b7280;
-      border-top: 1px solid #e5e7eb;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .hero { padding-top: 60px; }
-      .exp-card { padding: 16px 16px 18px; }
-    }
-  </style>
+  <!-- Main stylesheet (keep file name: style.css) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOP NAV -->
+  <!-- =========================================================
+       TOP NAVIGATION: update link labels if you rename sections
+       ========================================================= -->
   <header>
     <div class="nav-inner">
       <nav>
@@ -311,18 +28,27 @@
     </div>
   </header>
 
+  <!-- Main page content wrapper -->
   <div class="page">
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO (NAME + JOB TITLE)
+         Change the text below.
+         ========================= -->
     <section class="hero" id="about">
       <h1 class="hero-name">Hai Hoang</h1>
       <p class="hero-role">R&amp;D Engineer</p>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ==================
+         ABOUT ME SECTION
+         Edit the paragraphs.
+         ================== -->
     <section>
       <div class="section-inner">
         <h2 class="section-title">About Me</h2>
         <div class="section-underline"></div>
+
         <p class="section-text">
           I am an R&amp;D Engineer with experience in developing and testing
           technical solutions from concept to implementation. I enjoy working
@@ -339,7 +65,11 @@
       </div>
     </section>
 
-    <!-- WORK EXPERIENCE -->
+    <!-- ==========================
+         WORK EXPERIENCE SECTION
+         Duplicate .exp-card blocks
+         to add more jobs.
+         ========================== -->
     <section id="experience">
       <div class="section-inner">
         <h2 class="section-title">Work Experience</h2>
@@ -358,7 +88,7 @@
             </ul>
           </div>
 
-          <!-- JOB 2 -->
+          <!-- JOB 2: example previous role -->
           <div class="exp-card">
             <div class="exp-role">Previous Position – Company Name</div>
             <div class="exp-dates">October 2020 – December 2022</div>
@@ -372,7 +102,11 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- ==================
+         SKILLS SECTION
+         Edit texts inside each
+         .skill-card block.
+         ================== -->
     <section id="skills">
       <div class="section-inner">
         <h2 class="section-title">Skills</h2>
@@ -410,7 +144,12 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ==================
+         CONTACT SECTION
+         Change phone, location,
+         LinkedIn, email and QR
+         link here.
+         ================== -->
     <section id="contact">
       <div class="section-inner">
         <h2 class="section-title">Contact</h2>
@@ -460,15 +199,15 @@
             <div>
               <div class="contact-title">LinkedIn</div>
               <div class="contact-value">
+                <!-- TEXT CAN BE SHORTER THAN URL -->
                 <a href="https://www.linkedin.com/in/hai-h/" target="_blank" rel="noreferrer">
-  hai-hoang
-</a>
-
+                  linkedin.com/in/hai-h
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- EMAIL (LAST = FULL ROW) -->
+          <!-- EMAIL -->
           <div class="contact-item">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24">
@@ -487,7 +226,9 @@
           </div>
         </div>
 
-        <!-- QR CODE -->
+        <!-- QR CODE
+             To link to another page (e.g. LinkedIn),
+             change the URL in data= below. -->
         <div class="qr-wrapper">
           <div class="qr-card">
             <img
@@ -501,11 +242,13 @@
     </section>
   </div>
 
+  <!-- FOOTER: year is inserted by JavaScript below -->
   <footer>
     © <span id="year"></span> Hai Hoang. All rights reserved.
   </footer>
 
   <script>
+    // Automatically update the year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
