@@ -1,406 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Hai Hoang – Portfolio & CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Online CV and portfolio of Hai Hoang." />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --text-main: #e5e7eb;
-      --text-soft: #9ca3af;
-      --accent: #38bdf8;
-      --border: #1f2937;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1e293b, #020617 55%, #000 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 32px 16px 48px;
-    }
-
-    /* TOP BAR WITH 4 BUTTONS */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.96),
-        rgba(15, 23, 42, 0.85),
-        transparent
-      );
-      border-bottom: 1px solid rgba(31, 41, 55, 0.8);
-    }
-
-    .nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .nav-left {
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    nav {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
-      transition: all 0.15s ease-out;
-    }
-
-    nav a:hover {
-      color: #e5e7eb;
-      border-color: rgba(56, 189, 248, 0.9);
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9),
-        0 8px 20px rgba(15, 23, 42, 0.9);
-      background: radial-gradient(
-        circle at top left,
-        rgba(56, 189, 248, 0.25),
-        rgba(15, 23, 42, 1)
-      );
-    }
-
-    .hero {
-      margin-top: 32px;
-      margin-bottom: 32px;
-      border-radius: 18px;
-      padding: 20px 18px 24px;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      background: radial-gradient(
-          circle at top left,
-          rgba(56, 189, 248, 0.16),
-          transparent 55%
-        ),
-        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.2), #020617);
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.95);
-    }
-
-    .hero-name {
-      font-size: clamp(2.1rem, 2.5vw + 1.4rem, 2.6rem);
-      font-weight: 650;
-      letter-spacing: 0.04em;
-      margin: 0 0 4px;
-    }
-
-    .hero-role {
-      font-size: 1.05rem;
-      color: #a5b4fc;
-      margin-bottom: 12px;
-    }
-
-    .hero-text {
-      max-width: 40rem;
-      font-size: 0.98rem;
-      color: var(--text-soft);
-    }
-
-    .hero-tags {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      font-size: 0.78rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .tag.accent {
-      border-color: rgba(56, 189, 248, 0.95);
-      color: #e0f2fe;
-      background: rgba(8, 47, 73, 0.95);
-    }
-
-    section {
-      margin-bottom: 28px;
-      border-radius: 18px;
-      padding: 18px 18px 20px;
-      border: 1px solid var(--border);
-      background: radial-gradient(circle at top, #0b1120, #020617);
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.85);
-    }
-
-    section h2 {
-      margin: 0 0 6px;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #9ca3af;
-    }
-
-    .section-sub {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .item {
-      margin-bottom: 10px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed rgba(55, 65, 81, 0.7);
-    }
-
-    .item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .item-title {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .item-meta {
-      font-size: 0.86rem;
-      color: var(--text-soft);
-    }
-
-    .item ul {
-      margin: 6px 0 0 20px;
-      padding: 0;
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .item li { margin-bottom: 3px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px 18px;
-    }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .pill {
-      font-size: 0.8rem;
-      padding: 3px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .contact-row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 8px;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
-    }
-
-    .contact-label {
-      color: var(--text-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.76rem;
-    }
-
-    .contact-value a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
-    .contact-value a:hover { text-decoration: underline; }
-
-    footer {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 4px 16px 22px;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 640px) {
-      .hero { padding: 16px 14px 20px; }
-      .contact-row { grid-template-columns: 1fr; }
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav { justify-content: flex-start; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <title> Hai's Personal Site </title>
 </head>
+
 <body>
-  <header>
-    <div class="nav-inner">
-      <div class="nav-left">Hai Hoang</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <table cellspacing=20>
+    <tr>
+      <td><img src="pictures\04_hai.png" width="200" height="200" alt="Hai Profile "></td>
+      <td>
+        <h1> Thanh-Hai Hoang </h1>
+        <p><em> R&D Engineer </em></p>
+        <p> I'm working as a sensor specialist at <strong><a href="https://www.assistme.io/">Assistme.io</a></strong>. My background is Electrical Engineer. </p>
+      </td>
+    </tr>
+  </table>
+  <hr size=3 noshade>
+  <h3>Work Experience</h3>
+  <table cellspacing=10>
+    <thead>
+      <th>Dates</th>
+      <th>Work</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2017 - now</td>
+        <td>R&D Engineer at AssistMe GmbH</td>
+      </tr>
+      <tr>
+        <td>2014 - 2017</td>
+        <td>R&D Engineer at Fraunhofer IZM Berlin</td>
+      </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+  <hr size=3 noshade>
+  <h3>Skills</h3>
+  <table cellspacing=5>
+    <tr>
+      <td>Matlab:</td>
+      <td>🍚🍚🍚🍚</td>
+      <td>Python:</td>
+      <td>🍚🍚🍚</td>
+    </tr>
+    <tr>
+      <td>Javascript:</td>
+      <td>🍚🍚🍚</td>
+      <td>Labview:</td>
+      <td>🍚🍚🍚🍚</td>
+    </tr>
+  </table>
 
-  <div class="page">
-    <section class="hero" id="about">
-      <h1 class="hero-name">Hai Hoang</h1>
-      <div class="hero-role">Project Coordinator · Germany–Vietnam Liaison</div>
-      <p class="hero-text">
-        I work at the intersection of technology, operations and cross-cultural
-        communication. I help teams structure processes, coordinate projects
-        and bridge German–Vietnamese contexts in both technical and business
-        environments.
-      </p>
-      <div class="hero-tags">
-        <span class="tag accent">Open to new opportunities</span>
-        <span class="tag">Project Coordination</span>
-        <span class="tag">Tech & Operations</span>
-        <span class="tag">Germany ↔ Vietnam</span>
-      </div>
-    </section>
+  <hr size=3 noshade>
+  <a href="hobbies.html">My hobbies</a>
+  <a href="contacts.html">Contact Me</a>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <p class="section-sub">
-        Recent roles and responsibilities. Adjust these entries to match your CV.
-      </p>
 
-      <div class="item">
-        <div class="item-title">Project Coordinator – Company Name</div>
-        <div class="item-meta">City, Country · 2022 – 2025</div>
-        <ul>
-          <li>Coordinate cross-functional teams between Germany and Vietnam.</li>
-          <li>Set up and improve processes for operations and documentation.</li>
-          <li>Communicate with stakeholders in Vietnamese, German and English.</li>
-        </ul>
-      </div>
 
-      <div class="item">
-        <div class="item-title">Previous Role – Company Name</div>
-        <div class="item-meta">City, Country · 2019 – 2022</div>
-        <ul>
-          <li>Short bullet about what you did / achieved.</li>
-          <li>Short bullet about tools or responsibilities.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects & Highlights</h2>
-      <p class="section-sub">
-        A few selected projects and areas of work you want to highlight.
-      </p>
-
-      <div class="grid">
-        <div>
-          <div class="item-title">Process & Documentation</div>
-          <p class="section-sub">
-            Examples: creating templates, improving workflows, building clear
-            documentation for teams or tax/finance processes.
-          </p>
-        </div>
-        <div>
-          <div class="item-title">Germany–Vietnam Bridge</div>
-          <p class="section-sub">
-            Supporting cooperation between German companies and Vietnamese
-            partners, interpreting requirements and cultural expectations.
-          </p>
-        </div>
-      </div>
-
-      <h3 style="margin-top:16px; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.14em; color:#9ca3af;">
-        Skills & Tools
-      </h3>
-      <div class="pill-list">
-        <span class="pill">Project coordination</span>
-        <span class="pill">Process design</span>
-        <span class="pill">Documentation</span>
-        <span class="pill">Excel / Google Sheets</span>
-        <span class="pill">German · English · Vietnamese</span>
-        <span class="pill">Cross-cultural communication</span>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="section-sub">
-        Feel free to reach out for roles, collaborations or questions.
-      </p>
-
-      <div class="contact-row">
-        <div class="contact-label">Email</div>
-        <div class="contact-value">
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
-        </div>
-      </div>
-
-      <div class="contact-row">
-        <div class="contact-label">Location</div>
-        <div class="contact-value">City, Country</div>
-      </div>
-
-      <div class="contact-row">
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value">
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
-            linkedin.com/in/your-profile
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <span>© <span id="year"></span> Hai Hoang</span>
-    <span>Built with HTML · Hosted on GitHub Pages</span>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
+
 </html>
