@@ -303,3 +303,79 @@ footer {
     padding: 16px 16px 18px;
   }
 }
+
+/* =========================================================
+   PRINT VERSION (A4 CV)
+   - This only applies when printing or "Save as PDF"
+   - It keeps the content clean and removes navigation / QR
+   ========================================================= */
+@media print {
+
+  /* A4 page settings */
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  /* Remove background colors / shadows for cleaner print */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide sticky navigation and QR code when printing */
+  header,
+  .qr-wrapper {
+    display: none !important;
+  }
+
+  /* Let the content take full width of the page */
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Slightly reduce spacing between sections for print */
+  section {
+    margin-bottom: 24px;
+    page-break-inside: avoid;
+  }
+
+  /* Avoid breaking cards across pages */
+  .exp-card,
+  .skill-card,
+  .contact-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Make cards use simple borders instead of shadows */
+  .exp-card,
+  .skill-card {
+    background: #ffffff !important;
+    border: 1px solid #dddddd;
+  }
+
+  /* Links: show as underlined, dark */
+  a,
+  a:visited {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+  /* Footer: smaller and closer to last content */
+  footer {
+    border-top: 0;
+    margin-top: 8mm;
+    padding-top: 0;
+    font-size: 0.7rem;
+    color: #444444;
+  }
+}
+
