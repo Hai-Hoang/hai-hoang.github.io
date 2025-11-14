@@ -239,14 +239,16 @@ section {
   margin-top: 80px;
   margin-bottom: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* center the whole QR card on the page */
 }
 
 .qr-card {
+  display: flex;
+  flex-direction: column;    /* stack image above text */
+  align-items: center;       /* center image + text together */
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-soft);
-  display: inline-block;        /* (optional) keep card itself tight */
 }
 
 .qr-card img {
@@ -254,7 +256,7 @@ section {
   height: 140px;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  margin: 0 auto 6px;           /* 🔹 center the image under the card */
+  margin-bottom: 6px;        /* small gap between QR and text */
 }
 
 .contact-item {
