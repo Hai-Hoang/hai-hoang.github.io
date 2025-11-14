@@ -84,6 +84,16 @@ nav a:hover {
   padding: 80px 12px 70px;
 }
 
+/* Optional hero photo */
+.hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  object-fit: cover;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
 .hero-name {
   font-size: clamp(2.8rem, 4vw, 3.4rem);
   font-weight: 700;
