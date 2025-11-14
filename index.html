@@ -57,7 +57,7 @@
 
     nav {
       display: flex;
-      gap: 30px;          /* distance between the menu items */
+      gap: 30px;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -213,7 +213,7 @@
       margin-top: 16px;
     }
 
-        .qr-wrapper {
+    .qr-wrapper {
       margin-top: 24px;
       display: flex;
       justify-content: center;
@@ -232,7 +232,6 @@
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     }
 
-
     .contact-item {
       display: flex;
       align-items: flex-start;
@@ -240,25 +239,25 @@
     }
 
     .contact-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-.contact-icon svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--accent);
-  fill: none;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
     .contact-title {
       font-weight: 600;
@@ -292,12 +291,8 @@
     }
 
     @media (max-width: 640px) {
-      .hero {
-        padding-top: 60px;
-      }
-      .exp-card {
-        padding: 16px 16px 18px;
-      }
+      .hero { padding-top: 60px; }
+      .exp-card { padding: 16px 16px 18px; }
     }
   </style>
 </head>
@@ -406,7 +401,7 @@
           <div class="skill-card">
             <div class="skill-title">Languages</div>
             <div class="skill-text">
-              Vietnamese (native) · German · English . Chinese
+              Vietnamese (native) · German · English · Chinese
             </div>
           </div>
         </div>
@@ -420,77 +415,88 @@
         <div class="section-underline"></div>
 
         <div class="contact-grid">
-  <!-- PHONE -->
-  <div class="contact-item">
-    <div class="contact-icon">
-      <svg viewBox="0 0 24 24">
-        <path d="M8 4h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2c0 1-1 2-2 2A15 15 0 015 9c0-1 1-2 2-2z"></path>
-      </svg>
-    </div>
-    <div>
-      <div class="contact-title">Phone</div>
-      <div class="contact-value">
-        +49 176 4710 7767 <br />
-        
+          <!-- PHONE -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 4h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2c0 1-1 2-2 2A15 15 0 015 9c0-1 1-2 2-2z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-title">Phone</div>
+              <div class="contact-value">
+                +49 176 4710 7767
+              </div>
+            </div>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3a6 6 0 00-6 6c0 4 6 10 6 10s6-6 6-10a6 6 0 00-6-6z"></path>
+                <circle cx="12" cy="9" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-title">Location</div>
+              <div class="contact-value">
+                Berlin, Germany
+              </div>
+            </div>
+          </div>
+
+          <!-- LINKEDIN -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="9" width="3" height="8"></rect>
+                <circle cx="5.5" cy="6" r="1.5"></circle>
+                <path d="M10 9h3v1a3 3 0 013-1c2 0 3 1.3 3 3.5V17h-3v-4c0-1-.4-1.7-1.4-1.7-1 0-1.6.7-1.6 1.7v4H10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-title">LinkedIn</div>
+              <div class="contact-value">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+                  linkedin.com/in/your-profile
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- EMAIL (LAST = FULL ROW) -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                <polyline points="4,7 12,12 20,7"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-title">Email</div>
+              <div class="contact-value">
+                <a href="mailto:thanh-hai.hoang@outlook.de" style="white-space: nowrap;">
+                  thanh-hai.hoang@outlook.de
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR CODE -->
+        <div class="qr-wrapper">
+          <div class="qr-card">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://hai-hoang.github.io"
+              alt="QR code linking to Hai Hoang's website"
+            />
+            <div>Scan to open this website</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
-
-  <!-- LOCATION -->
-  <div class="contact-item">
-    <div class="contact-icon">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 3a6 6 0 00-6 6c0 4 6 10 6 10s6-6 6-10a6 6 0 00-6-6z"></path>
-        <circle cx="12" cy="9" r="2.5"></circle>
-      </svg>
-    </div>
-    <div>
-      <div class="contact-title">Location</div>
-      <div class="contact-value">
-        Berlin, Germany
-      </div>
-    </div>
-  </div>
-
-  <!-- LINKEDIN -->
-  <div class="contact-item">
-    <div class="contact-icon">
-      <svg viewBox="0 0 24 24">
-        <rect x="4" y="9" width="3" height="8"></rect>
-        <circle cx="5.5" cy="6" r="1.5"></circle>
-        <path d="M10 9h3v1a3 3 0 013-1c2 0 3 1.3 3 3.5V17h-3v-4c0-1-.4-1.7-1.4-1.7-1 0-1.6.7-1.6 1.7v4H10z"></path>
-      </svg>
-    </div>
-    <div>
-      <div class="contact-title">LinkedIn</div>
-      <div class="contact-value">
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
-          linkedin.com/in/your-profile
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- EMAIL (LAST = FULL ROW) -->
-  <div class="contact-item">
-    <div class="contact-icon">
-      <svg viewBox="0 0 24 24">
-        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
-        <polyline points="4,7 12,12 20,7"></polyline>
-      </svg>
-    </div>
-    <div>
-      <div class="contact-title">Email</div>
-      <div class="contact-value">
-  <a href="mailto:thanh-hai.hoang@outlook.de" style="white-space: nowrap;">
-    thanh-hai.hoang@outlook.de
-  </a>
-</div>
-
-    </div>
-  </div>
-</div>
-
 
   <footer>
     © <span id="year"></span> Hai Hoang. All rights reserved.
