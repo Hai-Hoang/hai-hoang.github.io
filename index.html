@@ -7,8 +7,8 @@
   <meta name="description" content="Online CV of Hai Hoang – R&amp;D Engineer." />
   <style>
     :root {
-      --bg: #fbf6ec;
-      --card-bg: #f6eee2;
+      --bg: #ffffff;
+      --card-bg: #f7f5f5;
       --text-main: #222222;
       --text-soft: #4b5563;
       --accent: #2169a8;
@@ -41,9 +41,9 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(251, 246, 236, 0.96);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid #efe3d4;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .nav-inner {
@@ -80,7 +80,7 @@
       font-weight: 700;
       letter-spacing: 0.03em;
       margin: 0 0 10px;
-      color: #222;
+      color: #111827;
     }
 
     .hero-role {
@@ -131,7 +131,7 @@
       background: var(--card-bg);
       border-radius: 16px;
       padding: 18px 22px 20px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
     }
 
     .exp-role {
@@ -169,45 +169,71 @@
       margin-bottom: 4px;
     }
 
-    /* SKILLS */
-    .skills-groups {
+    /* SKILLS – CARD GRID */
+    .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
       margin-top: 10px;
     }
 
-    .skills-group-title {
+    .skill-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 16px 18px 18px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .skill-title {
       font-weight: 600;
-      margin-bottom: 6px;
+      color: var(--accent);
+      margin-bottom: 8px;
     }
 
-    .chip-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .chip {
-      font-size: 0.85rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: #1f2933;
+    .skill-text {
+      font-size: 0.95rem;
+      color: var(--text-soft);
     }
 
     /* CONTACT */
-    .contact-row {
+    .contact-grid {
+      max-width: 760px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 8px;
-      margin-bottom: 8px;
-      font-size: 0.97rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
     }
 
-    .contact-label {
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .contact-title {
       font-weight: 600;
-      color: #374151;
+      margin-bottom: 2px;
+      font-size: 0.96rem;
+      color: #111827;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      color: var(--text-soft);
     }
 
     .contact-value a {
@@ -225,16 +251,13 @@
       padding: 8px 16px 24px;
       font-size: 0.8rem;
       color: #6b7280;
-      border-top: 1px solid #efe3d4;
+      border-top: 1px solid #e5e7eb;
       text-align: center;
     }
 
     @media (max-width: 640px) {
       .hero {
         padding-top: 60px;
-      }
-      .contact-row {
-        grid-template-columns: 1fr;
       }
       .exp-card {
         padding: 16px 16px 18px;
@@ -290,7 +313,7 @@
         <div class="section-underline"></div>
 
         <div class="exp-list">
-          <!-- JOB 1 -->
+          <!-- JOB 1: edit to your real job -->
           <div class="exp-card">
             <div class="exp-role">R&amp;D Engineer – Company Name</div>
             <div class="exp-dates">January 2023 – Present</div>
@@ -322,30 +345,32 @@
         <h2 class="section-title">Skills</h2>
         <div class="section-underline"></div>
 
-        <div class="skills-groups">
-          <div>
-            <div class="skills-group-title">Technical</div>
-            <div class="chip-list">
-              <span class="chip">R&amp;D Engineering</span>
-              <span class="chip">Testing &amp; validation</span>
-              <span class="chip">Data analysis</span>
-              <span class="chip">Documentation</span>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-title">Programming Languages</div>
+            <div class="skill-text">
+              C · C++ · Python · (edit to your real languages)
             </div>
           </div>
-          <div>
-            <div class="skills-group-title">Tools</div>
-            <div class="chip-list">
-              <span class="chip">Excel / Google Sheets</span>
-              <span class="chip">Python / MATLAB (if relevant)</span>
-              <span class="chip">Lab instruments</span>
+
+          <div class="skill-card">
+            <div class="skill-title">Technologies &amp; Tools</div>
+            <div class="skill-text">
+              Testing &amp; validation · Data analysis · Lab equipment · (edit as needed)
             </div>
           </div>
-          <div>
-            <div class="skills-group-title">Languages</div>
-            <div class="chip-list">
-              <span class="chip">Vietnamese (native)</span>
-              <span class="chip">German</span>
-              <span class="chip">English</span>
+
+          <div class="skill-card">
+            <div class="skill-title">Operating Systems</div>
+            <div class="skill-text">
+              Windows · Linux · (add embedded OS or others you use)
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-title">Languages</div>
+            <div class="skill-text">
+              Vietnamese (native) · German · English
             </div>
           </div>
         </div>
@@ -358,24 +383,47 @@
         <h2 class="section-title">Contact</h2>
         <div class="section-underline"></div>
 
-        <div class="contact-row">
-          <div class="contact-label">Email</div>
-          <div class="contact-value">
-            <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-title">Email</div>
+              <div class="contact-value">
+                <a href="mailto:your.email@example.com">your.email@example.com</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-row">
-          <div class="contact-label">Location</div>
-          <div class="contact-value">City, Country</div>
-        </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-title">Phone</div>
+              <div class="contact-value">
+                +49 000 000000 (edit)
+              </div>
+            </div>
+          </div>
 
-        <div class="contact-row">
-          <div class="contact-label">LinkedIn</div>
-          <div class="contact-value">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
-              linkedin.com/in/your-profile
-            </a>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-title">Location</div>
+              <div class="contact-value">
+                Berlin, Germany
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div>
+              <div class="contact-title">LinkedIn</div>
+              <div class="contact-value">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+                  linkedin.com/in/your-profile
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
