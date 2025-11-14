@@ -30,6 +30,14 @@ body {
   line-height: 1.6;
 }
 
+/* Make all images responsive and not break layout */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* Max width wrapper for the page content */
 .page {
   max-width: 960px;
